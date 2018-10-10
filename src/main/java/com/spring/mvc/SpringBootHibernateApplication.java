@@ -9,17 +9,17 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class SpringBootHibernateAngularApplication  extends SpringBootServletInitializer {
+public class SpringBootHibernateApplication  extends SpringBootServletInitializer {
 
 	@Autowired
 	DataSource dataSource;
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootHibernateAngularApplication.class, args);
+		SpringApplication.run(SpringBootHibernateApplication.class, args);
 	}
 	
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(SpringBootHibernateAngularApplication.class);
+		return application.sources(SpringBootHibernateApplication.class);
 	}
 }
