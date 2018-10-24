@@ -2,6 +2,7 @@ package com.spring.mvc.model;
 
 import java.io.Serializable;
 
+import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -27,10 +28,16 @@ public class User implements Serializable {
 	@Column(name = "id")
 	private long id;
 	
+	@Basic
+	@Column(name = "username", columnDefinition="varchar(100) NOT NULL")
 	private String username;
 	
-	private String address;
+	@Basic
+	@Column(name = "nif", columnDefinition="varchar(9) NOT NULL")
+	private String nif;
 	
+	@Basic
+	@Column(name = "email", columnDefinition="varchar(100) NOT NULL")	
 	private String email;
 
 	
@@ -49,13 +56,13 @@ public class User implements Serializable {
 	public void setUsername(String username) {
 		this.username = username;
 	}
-
-	public String getAddress() {
-		return address;
+	
+	public String getNif() {
+		return nif;
 	}
 
-	public void setAddress(String address) {
-		this.address = address;
+	public void setNif(String nif) {
+		this.nif = nif;
 	}
 
 	public String getEmail() {

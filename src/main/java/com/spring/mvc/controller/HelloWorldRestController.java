@@ -88,7 +88,7 @@ public class HelloWorldRestController {
         }
  
         currentUser.setUsername(user.getUsername());
-        currentUser.setAddress(user.getAddress());
+        currentUser.setNif(user.getNif());
         currentUser.setEmail(user.getEmail());
          
         userService.updateUser(currentUser);
